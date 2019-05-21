@@ -1,0 +1,20 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: dany-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dany
+  template:
+    metadata:
+      labels:
+        app: dany
+    spec:
+      containers:
+      - name: dany
+        image: nginxdemos/hello:latest
+        ports:
+        - containerPort: 80
