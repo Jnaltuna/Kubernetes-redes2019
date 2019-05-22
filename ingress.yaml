@@ -7,7 +7,7 @@ metadata:
 spec:
   rules:
   - host: got.ejemplo.com  
-  - http:
+    http:
       paths:
       - path: /dany
         backend:
